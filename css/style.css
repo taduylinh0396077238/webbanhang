@@ -1,0 +1,1576 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hedear{
+    display: flex;
+    background-image: linear-gradient(0, #ff6633, #f63e2e);
+    /* justify-content: center; */
+    height: 120px;
+
+}
+/* Responsive */
+.grid {
+    line-height: 16px;
+    width: 1300px;
+    max-width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    margin: 0 auto;
+    /* căn giữa  */
+    font-size: 15px;
+    justify-content: space-between;
+    font-weight: 300;
+    /* làm mỏng chữ  */
+    flex-wrap: wrap;
+   
+}
+.grid__row{
+    display: flex;
+    width: 100%;
+    margin-left: -5px;
+    margin-right: -5px;  
+    flex-wrap: wrap;
+}
+
+/* Test */
+
+.grid__column-2{
+    width: 16.6667%;
+    padding-left: 5px;
+    padding-right: 5px;
+   
+}
+.grid__column-2-4{
+    width: 20%;
+    padding-left: 5px;
+    padding-right: 5px; 
+}
+.grid__column-10{
+    width: 83.3334%;
+    padding-left: 5px;
+    padding-right: 5px;
+   
+}
+.category-item {
+    list-style: none;
+    position: relative;
+}
+.category-item:first-child::before {
+    display: none;
+}
+.category-item::before {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #E1E1E1;
+    top: 0;
+    right: 16PX;
+    left: 16PX;
+}
+.category-item a {
+    text-decoration: none;
+    
+
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    
+}
+.navbar-list{
+    color: #fff;
+    font-size: 13px;
+    list-style-type: none;
+    /* làm mất dấu chấm của li */
+    line-height: 26px;
+    margin: 0 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-item{
+    margin: 0 1px;
+    position: relative;
+    padding: 0 4px;
+
+}
+/* -------------------------------------- -------------------===============================================================*/
+.header__navbar-user{
+    display: flex;
+    justify-items: center;
+}
+.header__navbar-user:hover .header__navbar-user-menu {
+    display: block;
+}
+
+.header__navbar-user-img{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0 , 0, 0.1);
+}
+
+.header__navbar-user-name{
+    margin-left: 8px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.header__navbar-user-menu{
+    position: absolute;
+    z-index: 1;
+    /* ưu tiên của nó đc lên cao  */
+    padding-left:0 ;
+    background-color: #fff;
+    border-radius: 2px;
+    right: 96px;
+    top: 35px;
+    width: 128px;
+    list-style: none;
+    box-shadow: 0 1px 2px #ccc;
+   display: none;
+    
+}
+.header__navbar-user-menu ::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -16px;
+    width: 78px;
+    height: 20px;
+   
+   
+} 
+.header__navbar-user-menu::before{
+    content: "";
+    border-width: 12px 15px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    right: 12px;
+    top: -22px;
+
+}
+.header__navbar-user-item{
+    
+}
+
+/* class này là làm cho đăy xuất có dấu ngăn cách */
+.header__navbar-user-item--seperate {
+    border-top: 1px solid rgba(0, 0 , 0, 0.05);
+
+
+}
+.header__navbar-user-item a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.3rem;
+    padding: 4px 8px ;
+    display: block;
+    /* mặc định xuống dòng rồi nhưng mà pading vào ko có gì thay đổi thì
+    ta cho thuộc tính display: block vô */
+    z-index: 1;
+}
+
+/* THỰC SỰ PHẢI NHỚ CÂU NÀY KHI HOVER VÀO MÀ border-radius nó mà nhảy sang gọc nhọn thì ta phải làm 
+như sau để khắc phục lỗi qq nè  */
+.header__navbar-user-item a:first-child{
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.header__navbar-user-item a:last-child{
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+/* BH mới ngộ ra tốt nhất học đến đâu chắc đến đấy đi Linh ơi chú ý tập chung vô ko thì m mãi bị ngta xem thường đấy Linh ạ */
+
+
+.header__navbar-user-item a:hover {
+    background-color: #f9f2f2;
+   
+}
+    
+
+.navbar-item-has-qr:hover .hedear__qr{
+    display: block;
+    /* hover  vào thg bố sẽ ra thg con  */
+
+}
+.header__navbar-icon{
+    font-size: 15px;
+    padding: 0 0;
+    margin-left: 3px;
+}
+
+.navbar-items__Strong{
+    font-weight: 400;
+    /* làm chữ mỏng hoặc đậm theo tùy chỉnh  */
+}
+.navbar-item__separation::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid  #FB9086;
+    height: 14px;
+    top: 0;
+    right: -2px;
+    transform: translateY(41%);
+}
+.navbar-item:hover,
+.header__navbar-icon:hover,
+.header__navbar-icon-link:hover,
+.header_navbar-item-link:hover{
+    cursor: pointer;
+    /* hình bàn tay  */
+    color: rgba(255, 255, 255, 0.7);
+}
+.header_navbar-title--no-pointer {
+    cursor: text;
+    color: #fff;
+}
+.header__navbar-icon-link{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+
+/* HEDEAR QR CODE */
+.hedear__qr{
+    width: 186px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 129%;
+    /* nếu chúng ta thay đổi 100% với 129%  thì ta di chuột vào qr nó sẽ bị nhảy ra chỗ khác tại vì ta đã cho nó quá 100% 
+    nên ta sử dụng thuộc tính ::before để căn chinh cho nó có 1 lớp ảo  */
+    padding: 8px;
+    display: none;
+    border-radius: 2px;
+    /* border cho cái cạnh của nó  */
+        
+    /* kiểu như là cho nó ẩn đi  */
+     animation:  fadeIn 0.2s ease-in;
+     z-index: 1;
+     box-shadow: 0 1px 2px 0 rgba(0, 0 , 0, 0.1);
+}
+
+
+.hedear__qr-img{
+    width: 100%;
+
+}
+.hedear__qr::before {
+    position: absolute;
+    width: 100%;
+    top: -8px;
+    height: 15px;
+    content: "";
+    right: 0;
+    display: block;
+    /* background-color: #000; */
+  
+}
+.hedear__apps{
+    display: flex;
+    justify-content: space-between;
+    
+    }
+
+    /* Lấy ra thằng con thứ nhất :nth-child() */
+    .hedear__qr-link:nth-child(1){
+        margin-left: 12px;
+    }
+    .hedear__qr-link:nth-child(2){
+        margin-right: 12px;
+
+    }
+   
+.hedear__apps-dowload-img{
+    height: 18px;
+}
+
+/* Animation : hoạt hình*/
+@keyframes fadeIn {
+from{
+    opacity: 0;
+    top: 100%;
+}to {
+    opacity: 1;
+    top: 129%;
+}
+}
+
+
+
+/* Hedear notify */
+.navbar-item:hover .hedear__notify{
+    display: block;
+    cursor: default;
+    /* mất cái bàn tay */
+}
+.hedear__notify{
+    position: absolute;
+    z-index: 1;
+    top: calc(100% + 2px);
+    width: 404px;
+    right: 0;
+    border: 1px solid #D3D3D3;
+    background-color: #fff;
+    display: none;
+    transform-origin: calc(100% - 32px) top;
+    /* đây là thuộc tính làm cho phần bắt đầu hiện ở chính giữa
+    thông báo  */
+    animation: HedearNotify ease-in 0.1s;
+    /* làm nó mở ra tutu */
+    will-change: opacity, transform;
+    border-radius: 2px;
+}
+@keyframes HedearNotify{
+    from{
+        opacity: 0;
+        transform: scale(0);
+        /* độ lớn lên  */
+    }
+    to{
+            opacity: 1;
+            transform: scale(1);
+    }
+}
+/* --------------------------------------------------------------------------------------------------------- */
+.hedear__notify::before{
+    content: "";
+    border-width: 25px 31px;
+    border-style:  solid;
+    /* 2 dòng trên chỉnh sửa hình  */
+    border-color: transparent transparent #fff transparent;
+    /* transparent : trong suốt 
+    mục đích để tạo 1 tam giác nhìn hình ta có  */
+    position: absolute;
+    right: 5px;
+    top: -36px;
+}
+.hedear__notify::after{
+    /* làm 1 khoảng không di chuột kiểu như làm cầu để nó bắc qua ko bị mất  */
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -16px;
+    width: 90px;
+    height: 20px;
+    
+}
+.navbar-item__click:hover .hedear__notify{
+     display: block;
+     z-index: 1;
+}
+.hedear__notify-hedear{
+    height: 40p;
+    background-color: #fff;
+    
+}
+.hedear__notify-hedear h3 {
+    color: #999;
+    margin: 0 0 0 12px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+    user-select: none;
+    /* ko thể copy chữ mặc định  */
+    z-index: 1;
+}
+.hedear__notify-list{
+    padding-left: 0;
+}
+.hedear__notify-item{
+ 
+
+}
+.hedear__notify-item-viewed{
+    background-color: rgba(238, 77, 45, 0.08);
+ 
+}
+.hedear__notify-item-viewed:hover {
+    background-color: #f0eaea;
+}
+.hedear__notify-link{
+    display: flex;
+    /* cho nó lên 1 dòng ngang  */
+    text-decoration: none;
+   /* xóa gạch chân */
+   padding: 12px;
+   
+   
+}
+.hedear__notify-img{
+    width: 48px;
+    object-fit: contain;
+    /* làm cho ảnh cân với kích thước của nó  */
+
+}
+.hedear__notify-info{
+    margin-left: 12px;
+}
+.hedear__notify-name{
+    display: block;
+    /* xuống dòng  */
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+    line-height: 1.8rem;
+    /* cho chữ gần nhau  */
+
+
+}
+.hedear__notify-descrition{
+    display: block;
+    /* xuống dòng  */
+    font-size: 12px;
+    line-height: 1.6rem; 
+    /* cho nó sát thằng span1 */
+    margin-top: 4px;
+
+}
+.hedear__notify-footer{
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #000;
+    font-weight: 400;
+    line-height: 3.2rem;
+
+}
+
+.hedear__notify-footer-btn{
+    text-decoration: none;
+}
+
+
+
+/* Authen modal */
+
+/* .modal__body{
+    flex-direction: column;
+    justify-content: space-between;
+} */
+.auth-form{
+    width: 500px;
+    background-color: #fff;
+    line-height: 3;
+    border-radius: 5px;
+    overflow: hidden; 
+    /* thẳng con nó phải bé theo thằng cha
+    ko thể nào to hơn be mất thg cha đc  */
+}
+.auth-form__container{
+    padding: 0 32px;
+}
+.auth-form__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    padding: 0 12px;
+}
+.auth-form_heading{
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #000;
+
+}                                  
+
+.auth-form__switch{
+    font-size: 1.6rem;
+    color: red;
+    font-weight: 400;
+    cursor: pointer;
+
+
+
+}
+.auth-form__form{
+    width: 98%;
+
+
+}
+.auth-form__group{
+
+
+}
+.auth-form__input{
+    width: 96%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px;
+    border-radius: 2px;
+    border: 1px solid var(--black-color);
+    outline: none; 
+    /* khi chúng ta bấm vào border của nó nhạt hơn  thắc mắc thì ẩn
+    rồi thử để rõ hơn  */
+    
+    
+
+}
+
+.auth-form__input:focus{
+    /* :focus làm cho border chuyển màu  */
+    border-color: #888;
+
+
+}
+
+
+
+.auth-form__aside{
+    margin: 18px 0;
+    
+
+}
+
+.auth-form__policy-text{
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 12px ;
+
+}
+.auth-form__text-link {
+    color: #f63e2e;
+    text-decoration: none;
+   
+}
+.auth-form__controls{
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+.auth-form__controls-back{
+    margin-right: 8px;
+  
+}
+.auth-form__socials{
+    background-color:  #f5f5f5;
+    padding: 16px 36px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.btn--with-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn.btn_size-s-fb{
+    background-color: #3A5A98;
+    color: #fff;
+}
+.auth-form__socials-icon{
+    font-size: 1.6rem;
+}
+
+.btn.btn_size-s-fb
+.auth-form__socials-icon{
+    color: #fff;
+}
+.size-family{
+    font-size: 1.3rem;
+    margin: 0 36px;
+}
+.size-family-gg{
+    color: #000;
+    margin: 0 32px;
+    background-color: #fff;
+    line-height: normal;
+}
+.auth-form__help{
+    display: flex;
+    justify-content: flex-end;
+}
+.auth-form__help-link{
+    text-decoration: none;
+
+}
+.auth-form__aside-separate{
+    display: block;
+    height: 22px;
+    border-left: 1px solid #ccc;
+    margin: 12px 16px 0;
+}
+.auth-form__help-forgot{
+    color: #f63e2e;
+    font-weight: 400;
+}
+.auth-form__help-my{
+    color: #939393;
+}
+
+
+
+/* HEDER WITH SEARCH */
+.hedear-with-search{
+    height: 80px;
+    width: 1300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+}
+
+.hedear__logo{
+    width: 200px;
+    text-decoration: none;
+    color: transparent;
+}
+.hedear_logo-img{
+    height: 50px;
+    width: 150px;
+    color: #fff;
+}
+.header__search{
+    flex: 1;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 2px;
+    align-items: center;
+    display: flex
+    /* mục đích làm cho cái "Trong shop lên trên  còn muốn cho mũi tên 
+    lên 1 hàng ngang thì nhìn xuống .header__search-input bỏ with bằng 100% thay bằng 
+    flex = 1 thì nó sẽ tự hiểu là cả chiều ngang là của nó  "*/
+
+   
+}
+
+.header__search-input-wrap{
+    flex: 1;
+    /* mục đích cho cái flex lên đây là để nó bao cả thg input */
+    position: relative;
+}
+.header__search-input{
+    /* flex: 1; */
+   width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    /* color: #fff; */
+    padding: 0 16px;
+    border-radius: 2px;
+
+}
+
+.header__search-select{
+    position: relative;
+    border-left: 1px solid #ccc ;
+    /* cái này tạo ra gạch thẳng  */
+    padding-left: 16px;
+    cursor: pointer;
+    /* overflow: hidden;  */
+}
+
+.header__search-select-dow{
+    font-size: 1.1rem;
+    color: #7a7878;
+    margin: 0 16px 0 6px;
+   /*  cách khách  dùng margin-top mà ko ảnh hưởng 
+   đến  thằng trong shop thì ta cho nó thành posison : reation  
+   top : 2px ; tự động nó sẽ di chuyển lên xuống đc  */
+}
+
+
+.header__search-btn{
+        border: none;
+        height: 36px;
+        width: 60px;
+        background-color: #f45f50;
+        border-radius: 2px;
+        margin-right: 2px;
+        outline: none;
+        cursor: pointer;
+        
+}
+.header__search-select:hover .header__search-option{
+    display: block; 
+    /*  hover  vào nó để cho nó hiện lên  */
+}
+.header__search-btn:hover{
+    background-color: #fb6445;
+}
+
+.header__search-btn-icon{
+    font-size: 1.4rem;
+    color: #fff;
+   
+}
+.header__search-select-label{
+   
+    z-index: 0;
+
+}
+.header__search-option{
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 142px;
+    margin-top: 15px;
+    box-shadow: 0 1px 2px #ccc;
+    /* overflow: hidden;    */
+    /* tích thằng này lại vì mình làm cho thằng con bị thằng cha nó che mất nến ko hiện đc cầu  nối 
+    dòng ::after */
+    border-radius: 2px;
+    margin-left: 8px;
+    display: none;
+    animation: fadeIn ease-in 0.2s;
+    /* khi ta hover vào thì nó hiện tutu lên  */
+    cursor: pointer;
+}
+.header__search-option::before{
+    /*  Mục đích tạo ra cầu nối khi hover vào nó ko bị mất  */
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 20px;
+  
+    cursor: pointer;
+    top: -18px;
+    left: 0;
+    right: 0;
+}
+.header__search-option-item {
+   list-style: none;
+   background-color: #fff;
+   border-radius: 2px;
+   padding: 8px 8px;
+   /* text-align: right;  */
+   /*  nó đưa cả form  thẳng theo thằng cha của nó  */
+   cursor: pointer;
+}
+
+/* first-child vs last-child là border-radius cho nó tròn lại  */
+.header__search-option-item:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.header__search-option-item:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.header__search-option-item:hover{
+    background-color: #fafafa;
+    cursor: pointer;
+}
+.header__search-option-item span {
+    font-size: 1.6rem;
+    color: #000;
+    margin-left: 8px;
+}
+.header__search-option-item i {
+    font-size: 1.1rem;
+    color:  #fb6445;
+    margin: 0 8px 0 12px ;
+    display: none;
+    /* làm ẩn tích v đi  nhìn dòng bên dưới nói gì */
+}
+
+.header__search-option-item--active i{
+    display: inline-block;
+    /* mình link đến thằng nào thì nó sẽ hiện tích v thằng đó lên  */
+}
+
+
+.header__search-input:focus ~ .header__search-history{
+    display: block;
+    cursor: pointer;
+}
+/* cái này khi ta bấm vào thằng nhập tìm kiếm thì nó hiện ra ô lịch sử và ô sản phẩm đã tìm kiếm gần đây */
+/* đọc thêm trên w3school */
+/* search history */
+.header__search-history{
+    position: absolute;
+    top: calc(100% + 14px);
+    left: 0;
+    width: calc(100% - 16px);
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px #666;
+   display: none;
+   overflow: hidden;
+   z-index: 1;
+
+}
+
+.header__search-history-heading{
+    font-weight: 400;
+    margin: 8px 14px;
+   font-size: 1.4rem;
+   color: #999;
+}
+.header__search-history-list{
+    list-style: none;
+    margin: 6px 0 0;
+  
+}
+.header__search-history-item{
+    padding: 0 12px;
+    height: 28px;
+    font-size: 1.3rem;
+    color: #000;
+}
+
+.header__search-history-item:hover{
+    background-color: #fafafa;
+}
+.header__search-history-item a{
+    text-decoration: none;
+    color: #000;
+    line-height: 28px; 
+    /* CĂN GIỮA CHIỀU CAO CUA NÓ     */
+}
+
+
+/* Cart layout */
+.header__cart{
+    width: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.header__cart-shopping{
+    height: 40px;
+    line-height: 40px;
+    font-size: 2.4rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; 
+    cursor: pointer;
+}
+.header__cart-list::before{
+    content: "";
+    position: absolute;
+    top: -36px;
+    border-style: solid;
+    border-width: 23px 24px;
+    right: 0px;
+    border-color: transparent transparent #fff transparent;
+    cursor: pointer;
+    /*  cho  thêm vào mục đích di chuột vào cái mũi tên lớp giả thì nó vẫn còn bàn tay  */
+}
+
+.header__cart-list{
+    position: absolute;
+    top: calc(100% + 3px);
+    right: 50px;
+    box-shadow: 0 1px 3.125rem 0 rgba(0, 0 , 0, 0.2);
+    border-radius: 2px;
+    background-color: #fff;
+    width: 400px;
+    text-align: center;
+    display: none;
+    animation:  fadeIn 0.2s ease-in;
+    z-index: 1;
+
+  
+}
+.header__cart__show:hover .header__cart-list {
+    display: block;
+}
+
+.header__cart-list--no-cart {
+    padding: 24px 0 ;
+    
+}
+/* ------------------------------------------------------------------ */
+.header__cart-list--no-cart .header__cart-no-cart-img,
+.header__cart-list--no-cart .header__cart-list-no-cart-msg{
+    display: block;
+    margin-left:  auto;
+    margin-right: auto;
+    /*  căn giữa 1 thằng thì cho auto 2 bên đơn giản mà cần nhớ như in nhé  */
+    /*  đây là cái trường hợp  mà có sản phẩm thì mới dùng  */
+}
+.header__cart-no-cart-img{
+    width: 60%; 
+    display: none; 
+    /* làm ẩn cái thằng ko có đơn hàng đi để thêm phần có đơn hàng vào*/
+}
+.header__cart-list-no-cart-msg{
+    display: none;
+    /* display: block; */
+    /* note nó lại là vì đang làm thêm giao diện có sản phẩm  */
+   margin-top: 20px;
+}
+/* --------------------------------------------------------------------- */
+.header__cart__show::after{
+    /* làm 1 khoảng không di chuột kiểu như làm cầu để nó bắc qua ko bị mất  */
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 24px;
+    width: 76px;
+    height: 25px;
+    right: 36px;
+    cursor: pointer;
+}
+
+
+
+/* Header__cart-notice */
+/* ADD Số lượn sản phẩm trong giỏ hàng vô 
+làm trc hay sau cũng đc  */
+.header__cart-notice{
+    position: absolute;
+    padding: 1px 7px;
+    line-height: 1.4rem;
+    font-size: 1.4rem;
+    margin-top: -41px;
+    margin-left: 20px;
+    border-radius: 15px;
+    border: 2px solid #ee4d2d;
+    /* thêm cái border bên ngoài số 3 */
+    color: #000;
+    background-color: #fff;
+}
+
+.header__cart-heading{
+    font-weight: 300;
+    text-align: left;
+    /* nó nhảy sang trái  */
+    margin: 8px 0 12px 12px;
+    font-size: 1.4rem;
+    color: #999;
+}
+.header__cart-list-item{
+    padding-left: 0;
+    list-style: none;
+    height: 46vh; /* nó sẽ ăn theo màn hình to hay nhỏ */
+    overflow-y: auto; /* thanh lướt giỏ hàng theo chục y  */
+
+}
+
+
+.header__cart-item{
+    display: flex;
+    align-items: center; 
+  
+}
+.header__cart-item:hover{
+    background-color: #faf7f7;
+}
+
+.header__cart-img{
+    width: 42px;
+    height: 42px;
+    margin: 12px;
+}
+
+.header__cart-item-info{
+    width: 100%;
+}
+.header__cart-item-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    margin-right: 12px;
+}
+.header__cart-item-price-wrap{
+    color: #fa5631;
+    font-size: 1.2rem;
+    font-weight: 450;
+}
+.header__cart-item-name{
+    font-weight: 400;
+    line-height: 2rem;
+    max-height: 4rem; /*làm thuộc tính ko gò bó mỗi height làm mất thuộc tính căn giữa của nó */
+    overflow: hidden;
+    flex: 1px;
+    padding-right: 10px;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-align: left; /*khi cho flex:1 nó căn hết hàng ngắn ra giữa thì ta cho thuộc tính text-align: left để nó sang hết bên trái*/
+    
+}
+.header__cart-item-price{
+   
+}
+.header__cart-item-multiply{
+    font-size: 9px;
+    color: #757575
+}
+.header__cart-item-quantity{
+    color: #757575 ;
+    font-size: 10px;
+    font-weight: 350;
+}
+.header__cart-item-body{
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.header__cart-item-description{
+    font-weight: 380;
+}
+.header__cart-item-remove{
+    margin-right: 12px;
+    font-weight: 400;
+}
+.header__cart-item-remove:hover{
+    color: #fa5631 ;
+    cursor: pointer;
+}
+ .btn.btn-primary{
+    background-color: rgb(238, 77, 45);
+    color: #fff;
+    margin: 10px 12px;
+    float: right;
+    /* đẩy sang phải */
+    
+}
+.header__cart-item-views:hover {
+    background-color: rgb(247, 103, 74);
+}
+
+
+/* APp Container */
+.app__container {
+        background-color: #F5F5F5;
+        /* height: 1227px; */
+}
+.app-content {
+    margin-top: 36px;
+}
+.category {
+    background-color: #FFF;
+}
+.grid__column-2 {
+    /* background-color: #FFF; */
+    line-height: 29px;
+    margin-top: 0;
+    margin-bottom: 22px;
+}
+
+.category__heading {
+    font-weight: 500;
+    padding: 12px 16px ;
+    margin-top: 0px;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #ebe8e8;
+    text-transform: uppercase; /*Thuộc tính làm chữ full IN hoa*/
+}
+.category__heading-item {
+    margin-right: 10px;
+    font-size: 1.4rem;
+    
+}
+
+.category-list {
+        padding-left: 0;
+        padding: 12px 16px ;
+}
+
+.category-item--active .category-item__link{
+   /* padding-top: 8px; */
+
+}
+.category-item--active .category-item__link::before {
+    content: "";
+    position: absolute;
+    border: 4px solid;
+    border-color: transparent transparent transparent  red;
+    left: 5px;
+    /* ------ */
+    top: 50%;
+    transform: translateY(calc(-50% - 1px));
+    /* mục đích làm thuộc tính này là vì khi chúng ta thay đổi padding thì cái mũi tên tạo ra nó sẽ di chuyển theo dòng chữ mà ko bị lệch 
+    còn nếu ko có thuộc tính này thì nó sẽ nhảy lung tung ko theo quy luật nữa 
+    */
+}
+/* =============> Hay Phết <================ */
+.category-item__link{
+
+    /* Bây giờ chúng ta làm mấy cái thẻ li chạy tutu sang bên phải thì thêm posittion :relative  */
+    position: relative;
+    color: #000;
+    font-size: 1.4rem;
+    display: block; 
+    padding: 2px 16px;
+    font-weight: 400 ;
+    /* khi padding top vs bottom mà ko di chuyển ta thêm thuộc tính display : block vô nhé */
+    /* transition: right linear 0.1s;
+    /* thuộc tính chạy từ left sang right */
+    /* right: 0; */
+}
+.category-item__link-sp {
+    color: #ee553b;
+}
+.category-item__link:hover {
+    color: #fa5631;
+    /* right: -4px; */
+
+}
+
+
+
+/* Grid__column-10 */
+.btn.btn--primaryy {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+.home-filter__label {
+    font-size: 1.4rem;
+    color: #555555;
+    margin-right: 16px;
+}
+.home-filter__btn{
+    min-width: 90px;
+    margin-right: 12px;
+}
+
+.home-filter {
+    background-color: rgba(0, 0 , 0, 0.05);
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 2px;
+}
+.header__search-select-dow-2 {
+    font-size: 1.1rem;
+    color: #7a7878;
+    margin: 0 0px 0 6px;
+}
+.select-input__list {
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    list-style: none;
+    padding: 0 12px;
+    z-index: 1;
+}
+.select-input__item a{
+    text-decoration: none;
+    
+}
+
+.home-filter__page {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.home-filter__page-num {
+   
+    margin-right: 22px;
+}
+
+.home-filter__page-current {
+    color: #ee4d2d;
+}
+
+
+.home-filter__page-control {
+    border-radius: 2px;
+    overflow: hidden;
+    width: 72px;
+    display: flex;
+    height: 36px;
+}
+.home-filter__page-btn {
+   flex: 1;
+    border-radius: 2px;
+   background-color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-decoration: none;
+   color: #000;
+   font-size: 1,2rem;
+
+}
+.home-filter__page-btn:first-child {
+    border-right: 1px solid #eee;
+    font-weight: 200;
+}
+.home-filter_page-btn--disabled {
+        color: #ccc;
+}
+
+
+
+/* Product item */
+.home-product{
+    display: flex;
+    margin-bottom: 10px;
+}
+.home-product-item {
+    display: block;
+     background-color: #fff;
+     margin-top: 10px;
+     position: relative;
+     cursor: pointer;
+     border-radius: 2px;
+     box-shadow: 0 1px 2px 0 rgb(0, 0, 0 , 0.1);
+     transition: transform linear 0.1s;
+     will-change: transform;
+     text-decoration: none;
+     
+}
+.home-product-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 1px 20px 0 rgb(0, 0, 0 , 0.05);
+}
+.home-product-item__img {
+    padding-top: calc(100% - 42px);
+    /* ảnh nó sẽ tự cập nhật chiều dài vs rộng bằng nhau  */
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* khi ảnh ko tràn hết phần hay to quá nhìn đc 1 góc ta thê thuộc tính contain vào  */
+     background-position: top center;
+     /*  thuộc tính làm cho bức ảnh căn chỉnh chính giữa  */
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.home-product-item__name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgba(0,0,0,.87);;
+    /*  */
+    line-height: 1.8rem;
+    height: 3.6rem;
+    /* phần name sản phẩm : khi chúng ta muốn dòng tên của chúng ta thu gọn lại thành 2 dòng thì chúng ta quy ước cái line-height:1.8 cho mỗi dòng 
+    3 dòng = 5.6rem bây h muốn hiện ra mỗi 2 dòng ta để height: 3.6rem tương đương với 2 dòng  xong rồi thằng con lộ ra thì aane dùng overflow:hidden */
+    overflow: hidden;
+    margin: 10px;
+    margin-bottom: 8px;
+    /* cách tạo ra ba chấm  */
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* muốn dấu chấm ở dòng thứ 2 */
+
+}
+
+.home-product-item__price {
+    /* margin-left: 10px; */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /*Thêm thuộc tính này vào nếu mà có trường hợp giá nó quá dài nó nhảy ra khỏi cái ô chứa 
+    nó thì nó sẽ tự động nhảy xuống */
+    
+}
+.home-product-item__icon {
+    font-size: 0.75rem;
+    text-decoration: line-through; /*gạch đôi chữ  */ 
+
+}
+.home-product-item__icon-1{
+    font-size: 0.85rem;
+    color: #fa5631 ;
+    font-weight: 350;
+}
+.home-product-item__price-one{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.home-product-item__price-tow{
+    display: flex;
+    align-items: center;
+    margin-left: 9px;
+}
+.home-product-item__price-old {
+    font-size: 1.4rem;
+    color: #666;
+    text-decoration: line-through; /*gạch đôi chữ  */ 
+    font-weight: 370;
+   
+}
+
+.home-product-item__price-current {
+    color: #ee4d2d ;
+    font-weight: 400;
+
+}
+
+.home-product-item__action {
+    display: flex;
+    justify-content: space-between;
+    margin:8px 10px 0;
+}
+
+.home-product-item__like {
+    font-size: 1.3rem;
+}
+.home-product-item__like-liked{
+
+}
+
+.home-product-item__like-icon-empty{
+
+}
+
+.home-product-item__like-icon-fill{
+    display: none;
+    color: #F63D30;
+
+}
+.home-product-item__like-liked .home-product-item__like-icon-fill {
+    display: inline-block;
+}
+.home-product-item__like-liked .home-product-item__like-icon-empty {
+    display: none;
+    
+}
+.home-product-item__rating {
+        font-size: 1rem;
+        /* color: #ffce3d; */
+        color: #D5D5D5;
+        transform: scale(0.8); /* Khi ko chỉnh đc font-size chúng ta chỉnh bằng thuộc tính tranfrom : scale(0.7)*/
+        margin-left: auto; /*cho div ngôi sao chạm đến cái item gần nhất mà chúng ta ko cần chia từng cái div nhỏ ra  */
+}
+.home-product-item__rating-gold{
+    color: #ffce3d;
+}
+.home-product-item__sold{
+    font-size: 1.2rem;
+    margin-left: 4px;
+    /* DO có thể có đã bán có thẻ ko nên chúng ta nên margin cho thằng 88 đã bán  */
+    color: #000;
+}
+
+.home-product-item__origin {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    font-size: 1.3rem;
+    color: #595959;
+    font-weight: 300;
+    margin-top: 3px;
+}
+
+.home-product-item__origin-name {
+    margin-bottom: 10px;
+
+}
+
+.home-product-item__favorite {
+        position: absolute;
+        top: 10px;
+        left: -4px;
+        color: #F63D30; /*nếu muốn chỉnh màu thì chúng ta chỉ cần chỉnh màu ở đây là auto chuyển hết */
+        background-color: currentColor; /* currentColor:  lấy theo màu thay đổi của màu chính làm nó đậm hơn */
+        font-size: 1.2rem;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        font-weight: 450;
+        padding-right: 4px;
+}
+.home-product-item__favorite span {
+    color: #fff;
+}
+.home-product-item__favorite i {
+    font-size: 0.9rem;
+    margin: 0 2px 0 5px;
+    line-height: 1.6rem;
+    color: #fff;
+}
+.home-product-item__favorite::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    border-top:3px solid currentColor;
+    border-left:3px solid transparent;
+    /* Phải có currentColor thì ta mới xử dụng đc với filter được làm cho cái phần đệm có tông màu luôn tối hơn thằng chứa chữ 
+     */
+    filter: brightness(60%);
+}
+
+.home-product-item__sall-off {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 36px;
+    background-color: rgba(255, 216, 64, 0.941);
+   border-top-right-radius: 2px;
+}
+/* Tạo ra lá cờ */
+.home-product-item__sall-off::after {
+    border-width: 0 20px 4px;
+    border-style: solid;
+    content: "";
+    top: 36px;
+    right: 0;
+    position: absolute;
+    border-color: transparent rgba(255, 216, 64, 0.941) transparent rgba(255, 216, 64, 0.941);
+}
+
+.home-product-item__sall-off-persent {
+    color: #ef612c;
+    font-weight: 400;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 1px;
+
+}
+
+.home-product-item__sall-off-lable {
+    /* position: absolute;
+    top: 10px; */
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    line-height: 2rem;
+    font-weight: 400;
+}
+.home-product__pagination{
+    margin: 56px 0 32px 0 ;
+}
+.pagination-item {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    min-width: 2.5rem;
+    text-align: center;
+    height: 2.9rem;
+    font-size: 2rem;
+    margin-left: 0.9375rem;
+    margin-right: 4.5rem;
+}
+.pagination-item__link{
+    display: flex;
+    text-decoration: none;
+    color: #939393;
+    min-width: 40px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.pagination-item__active a {
+    background-color: #ee4d2d;
+    color: #fff;
+    border-radius: 2px;
+}
+.pagination-item__active a:hover {
+    background-color: #f2694e;
+}
+
+/* Footer */
+.footer{
+    border-top: 4px solid #ee4d2d;
+    padding: 44px;
+    overflow-y: auto;
+}
+
+.footer__heading {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #737386;
+    font-weight: 550;
+}
+.footer-list {
+    padding-top: 18px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.footer-item {
+    margin-bottom: 1.4rem;
+}
+.footer-item__link {
+    text-decoration: none;
+    color: #737373;
+    font-size: 1.4rem;
+    font-weight: 400;
+    display: flex;
+}
+.footer-item__link:hover {
+    color: #ee4d2d;
+}
+
+.footer-item__link-icon {
+    font-size: 1.7rem;
+    margin-right: 8px;
+}
+.footer-item__link-icon:hover {
+    color: #737373;
+}
+
+.footer__download {
+    display: flex;
+    margin-top: 18px;
+
+}
+.footer__dowload-qr {
+    width: 80px;
+    object-fit: contain; /*Làm cân ảnh */
+    border: 1px solid #ccc;
+}
+.footer__download-apps {
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer__download-app-img {
+    height: 18px;
+}
+.footer-img {
+    width: 100%;
+    object-fit: contain;
+    display: flex;
+    margin-left: -56px;
+    justify-content: center;
+    margin-top: 18px;
+}
+/* .footer__text {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+} */
+
+.footer__end {
+    background-color:  #F5F5F5;
+}
+
+
+p.footer__text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: -43px;
+    min-height: 40px;
+    align-items: center;
+}
